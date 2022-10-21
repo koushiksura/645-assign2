@@ -1,5 +1,8 @@
 pipeline {
-    agent any 
+    agent any
+     environment {
+	def BUILDVERSION = sh(script: "echo `date +%s`", returnStdout: true).trim()
+     }		
      stages {
 	stage ("Building the docker image") {
 		steps {
@@ -7,7 +10,7 @@ pipeline {
 				checkout scm
 				sh 'rm -rf *.war'
 				sh 'jar -cvf 645-assign1.war -C portfolio/src/main/webapp .' 
-				sh 'echo $(env.BUILD_ID}'
+				sh 'echo $(BUILDVERSION}'
 			}
 		}
 	}
