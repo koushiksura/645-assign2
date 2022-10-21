@@ -8,7 +8,7 @@ pipeline {
 				checkout scm
 				sh 'rm -rf *.war'
 				sh 'jar -cvf 645-assign1.war -C portfolio/src/main/webapp .' 
-				sh 'echo ${BUILD_TIMESTAmP}'
+				sh 'echo ${BUILD_TIMESTAMP}'
 			}
 		}
 	}
