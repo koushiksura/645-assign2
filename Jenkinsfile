@@ -21,6 +21,16 @@ pipeline {
 			}
 		}
 	}
+	     stage ("Deploying to Rancher as single pod") {
+		steps {
+			sh 'kubectl set image deployment/assignment2 assignment2=koushiksura/645-assign2:${BUILD_NUMBER} -n Jenkins-pipeline'
+		}
+	}
+	stage("Deploying to Rancher as with load balancer") {
+		steps {
+			sh 'kubectl set image deployment/studentsurvey645-lb studentsurvey645-lb=hekme5/studentsurvey:${BUILD_TIMESTAMP} -n Jenkins-pipeline'
+		}
+	}
 	
 	}
 }
