@@ -17,7 +17,7 @@ pipeline {
 	stage("Pushing Image to DockerHub") {
 		steps {
 			script {
-				sh 'docker push koushiksura/645-assign2:${BUILD_TIMESTAMP}'
+				sh 'docker push koushiksura/645-assign2:${BUILD_NUMBER}'
 			}
 		}
 	}
