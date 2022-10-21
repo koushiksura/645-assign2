@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./survey.css">
+</head>
+<body>
+    <div>
+        <div class="page-heading-wrapper">
+            <h1 class="fx-row-center gmu-green">Student Survey</h1>
+        </div>
+        <div class="fx-row-center margin-lr-auto body-color form-wrapper" >
+            <form action="#" method="post" class="width-100 fx-col-center">
+                <div class="form-control" >
+                    <p>User Name <span class="color-red">*</span></p>
+                    <!-- <br/> -->
+                    <input class="txt-input" type="text"
+                           id="name" 
+                           name="name" 
+                           autocomplete="on" 
+                           autofocus 
+                           required
+                           placeholder="Enter your name"/>
+                </div>
+                <div class="form-control">
+                    <p>  Street Address <span class="color-red">*</span></p>
+                    <!-- <br/> -->
+                    <input class="txt-input" type="text"
+                           id="streetAddress" 
+                           autocomplete="on" 
+                           required
+                           placeholder="Enter address" />
+                </div>
+                <div class="form-control">
+                    <p>City<span sclass="color-red">*</span></p>
+                     <!-- <br/> -->
+                    <input class="txt-input" type="text" name="city" placeholder="City">
+                </div>
+                <div class="form-control">
+                    <p>State<span class="color-red">*</span></p>
+                     <!-- <br/> -->
+                    <input class="txt-input" type="text" name="state" placeholder="State">
+                </div>
+                <div class="form-control">
+                    <p>Zip<span class="color-red">*</span></p>
+                    <!-- <br/> -->
+                    <input class="txt-input"
+                       type="text" 
+                       id="zip" 
+                       name="zip" 
+                       autocomplete="on" 
+                       required
+                       placeholder="12345" 
+                       maxlength="5" />
+               </div>
+               <div class="form-control">
+                    <p>Contact Number<span class="color-red">*</span></p>
+                    <input class="txt-input" type="tel"
+                           id="number" autocomplete="on"
+                           placeholder="Enter your contact number" />
+                </div>
+               <div class="form-control">
+                      <p>Email<span class="color-red">*</span></p>
+                    <input class="txt-input" type="email"
+                           id="email" name="email" autocomplete="on" required
+                           placeholder="name@domain.com" />
+                </div>
+            <br> 
+               <div class="form-control">
+                <p> Date of Survey<span class="color-red">*</span></p>
+        
+                    <!-- Input Type Date-->
+                    <input class="txt-input" type="date"
+                           id="date"
+                           placeholder="Enter today's date" />
+                </div>
+        
+        <br>
+                <div class="form-control fx-col-center">
+                    <label>What do you like the most about the campus
+                        <small>(Check all that apply)</small>
+                    </label>
+                    <!-- Input Type Checkbox -->
+                    <br>
+                    <div class="margin-lr-auto display-flex-col">
+                        <label><input type="checkbox" name="likeuni" value="friends" />students<br/></label>
+                        <label><input type="checkbox" name="likeuni" value="location" />location<br/></label>
+                        <label><input type="checkbox" name="likeuni" value="campus" />campus<br/></label>
+                        <label><input type="checkbox" name="likeuni" value="atmosphere" />atmosphere<br/></label>
+                        <label><input type="checkbox" name="likeuni" value="dormrooms" />dorm rooms<br/></label>
+                        <label><input type="checkbox" name="likeuni" value="sports" />sports<br/></label>
+                    </div>
+        </div>
+        <br>
+               <div class="form-control fx-col-center" >
+                    <label>
+                        What made you interested in this university?
+                    </label>
+        
+                    <!-- Input Type Radio Button -->
+                    <br>
+                    <div class="margin-lr-auto display-flex-col">
+                        <label><input type="radio" name="intinuni" value="true" > friends<br></label>
+                        <label><input type="radio" name="intinuni" value="true"> television<br></label>
+                        <label><input type="radio" name="intinuni" value="true"> internet<br></label>
+                        <label><input type="radio" name="intinuni" value="true"> other<br></label>
+                    </div>
+                    
+        </div>
+        <br>
+        <div class="form-control fx-col-center">
+        <p>
+                        How likely would you recommend GMU to your friend? <span class="color-red">*</span>
+        </p>
+        <div class="margin-lr-auto width-100 display-flex-col" >
+        <select class="txt-input rec-options" name="recommend" id="recommend">
+            <option value="very likely">Very Likely</option>
+            <option value="likely">Likely</option>
+            <option value="unlikely">Unlikely</option>
+        </select>
+    </div>
+        </div>
+        <br>
+                
+        
+                <div class="form-control">
+                    <p>
+                        Rafel(Enter comma separated values)
+                    </p>
+                    <input type="text" class="txt-input"
+                           id="userinput" placeholder="Enter 10 values"/>
+              </div>
+        <br>
+        <div class="form-control fx-col-center">
+            <label for="comment">
+                Additional Comments
+            </label>
+<br>
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment" rows="6" cols="50"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+        <br>
+                <!-- Multi-line Text Input Control -->
+        <div class="width-100 btn-wrapper" >
+                <button type="submit" value="submit" class="btn-submit">
+                    SUBMIT</button>
+                <button type = "reset" class="btn-cancel">CANCEL</button>
+        </div>        
+            </form>
+        
+        </div>
+
+    </div>
+</body>
+</html>
