@@ -23,7 +23,7 @@ pipeline {
 	}
 	     stage ("Deploying to Rancher") {
 		steps {
-			sh 'kubectl set image deployment/assignment2-645 container-0=koushiksura/645-assign2:${BUILD_NUMBER} -n default'
+			sh 'kubectl set image deployment/assign2-645-deploy container-0=koushiksura/645-assign2:${BUILD_NUMBER} -n default'
 		}
 	}	
 	}
